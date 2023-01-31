@@ -17,23 +17,53 @@ john = User.create!(
   email: 'john@gmail.com'
 )
 
-push_press = Exercice.create!(
-  name: 'Push Press',
-  max_load: 90,
-  notes: 'Encore du travail à faire sur la technique',
-  user: john
-)
 
-push_press2 = Exercice.create!(
-  name: 'Push Press',
-  max_load: 90,
-  notes: 'Encore du travail à faire sur la technique',
-  user: john
-)
+10.times do
+  push_press = Exercice.create!(
+    name: 'Push Press',
+    image_url: '/assets/push_press.jpg',
+    user: john,
+  )
 
-push_press3 = Exercice.create!(
-  name: 'Push Press',
-  max_load: 90,
-  notes: 'Encore du travail à faire sur la technique',
-  user: john
-)
+  pp_load = Load.create!(
+    max_load: 90,
+    exercice: push_press,
+  )
+
+  pp_note = Note.create!(
+    content: 'suppppppppppppppppppppppppppppppppppppppp',
+    exercice: push_press,
+  )
+
+  snatch = Exercice.create!(
+    name: 'Snatch',
+    image_url: '/assets/snatch.jpg',
+    user: john
+  )
+
+  snatch_load = Load.create!(
+    max_load: 90,
+    exercice: snatch,
+  )
+
+  snatch_note = Note.create!(
+    content: 'suppppppppppppppppppppppppppppppppppppppp',
+    exercice: snatch,
+  )
+
+  deadlift = Exercice.create!(
+    name: 'Deadlift',
+    image_url: '/assets/deadlift.jpg',
+    user: john
+  )
+
+  deadlift_load = Load.create!(
+    max_load: 90,
+    exercice: deadlift,
+  )
+
+  deadlift_note = Note.create!(
+    content: 'suppppppppppppppppppppppppppppppppppppppp',
+    exercice: deadlift,
+  )
+end

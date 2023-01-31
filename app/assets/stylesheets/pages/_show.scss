@@ -1,0 +1,54 @@
+h3 {
+  color: #8A8A8A;
+  font-weight: 700
+}
+
+.section {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row;
+  height: fit-content;
+  min-height: 240px;
+  background-color: #373535;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 16px;
+
+  h2 {
+    font-size: xx-large;
+    font-weight: 600;
+    color: white;
+  }
+
+  .fa-pen-to-square{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+  }
+
+}
+
+.green_text {
+  color : #93FECE;
+}
+
+.gray_text {
+  color:#8A8A8A;
+}
+
+.board {
+  width: 30%;
+  font-size: 12px;
+
+  .board_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid #8A8A8A;
+    margin-bottom: 8px;
+    padding-bottom: 2px;
+  }
+
+}

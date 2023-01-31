@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+// Gem and tools
+@import "font-awesome";
+
+/* Graphical variables */
+@import 'config/colors';
+@import 'config/font';
+
+/* Components personnalisé */
+@import 'components/card';
+@import 'components/navbar';
+@import 'components/avatar';
+@import 'components/banner';
+
+
+// Pages
+@import 'pages/home';
+@import 'pages/show';
+
+
+body {
+  background-color: $color-primary ;
+  text-decoration: none;
+
+  h1 {
+    color: white;
+  }
+}
+
+.container {
+  padding: 0px 14px;
+}

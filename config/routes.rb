@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'pages/home'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  root 'pages#home'
+  root 'exercices#home'
 
   # Defines the root path route ("/")
-  resources :pages, only: :show
+  resources :exercices, only: %i[home show]
 end

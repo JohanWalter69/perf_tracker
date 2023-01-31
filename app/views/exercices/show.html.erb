@@ -1,0 +1,58 @@
+<%= link_to root_path do %>
+  <p class="text-white m-2"><i class="fa-regular fa-circle-left"></i></p>
+<% end %>
+
+<div class="banner">
+  <img src="<%=@exercice.image_url%>" alt="">
+  <h1><%=@exercice.name%></h1>
+</div>
+
+<div class="container">
+  <h3>Ton Tracking de charges:</h3>
+  <div class="section">
+    <div class="subsection">
+      <h3 class="text-[#8A8A8A] mt-10">RM</h3>
+      <h2><%=@load.max_load%>kg</h2>
+      <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+    </div>
+    <div class="board">
+      <div class="board_line">
+        <p class="green_text">110%</p>
+        <p class="gray_text"><%=(@load.max_load*1.1).truncate(1)%>kg</p>
+      </div>
+      <div class="board_line">
+        <p class="green_text">95%</p>
+        <p class="gray_text"><%=(@load.max_load*0.95).truncate(1)%>kg</p>
+      </div>
+      <div class="board_line">
+        <p class="green_text">90%</p>
+        <p class="gray_text"><%=(@load.max_load*0.9).truncate(1)%>kg</p>
+      </div>
+      <div class="board_line">
+        <p class="green_text">85%</p>
+        <p class="gray_text"><%=(@load.max_load*0.85).truncate(1)%>kg</p>
+      </div>
+      <div class="board_line">
+        <p class="green_text">80%</p>
+        <p class="gray_text"><%=(@load.max_load*0.8).truncate(1)%>kg</p>
+      </div>
+      <div class="board_line">
+        <p class="green_text">70%</p>
+        <p class="gray_text"><%=(@load.max_load*0.7).truncate(1)%>kg</p>
+      </div>
+      <div class="board_line">
+        <p class="green_text">60%</p>
+        <p class="gray_text"><%=(@load.max_load*0.6).truncate(1)%>kg</p>
+      </div>
+      <div class="board_line">
+        <p class="green_text">50%</p>
+        <p class="gray_text"><%=(@load.max_load*0.5).truncate(1)%>kg</p>
+      </div>
+    </div>
+  </div>
+  <h3>Tes notes:</h3>
+  <div class="section">
+    <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+    <p class="gray_text mt-4"><%=@note.content%></p>
+  </div>
+</div>

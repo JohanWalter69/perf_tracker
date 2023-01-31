@@ -73,3 +73,10 @@ end
 
 # Authentification
 gem "devise"
+
+# Framework front
+gem "tailwindcss-rails", "~> 2.0"
+gem "font-awesome-sass", "~> 6.1"
+
+# helper
+gem "simple_form", github: "heartcombo/simple_form"
