@@ -1,19 +1,20 @@
-<%= link_to root_path do %>
-  <p class="text-white m-2"><i class="fa-regular fa-circle-left"></i></p>
-<% end %>
-
 <div class="banner">
   <img src="<%=@exercice.image_url%>" alt="">
   <h1><%=@exercice.name%></h1>
 </div>
 
 <div class="container">
+<div class="section">
+  <%= image_tag 'graph.jpg', class:"rounded-xl" %>
+</div>
   <h3>Ton Tracking de charges:</h3>
   <div class="section">
     <div class="subsection">
       <h3 class="text-[#8A8A8A] mt-10">RM</h3>
       <h2><%=@load.max_load%>kg</h2>
-      <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+      <%= link_to edit_exercice_load_path(@load) do  %>
+        <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+      <% end %>
     </div>
     <div class="board">
       <div class="board_line">
@@ -52,7 +53,9 @@
   </div>
   <h3>Tes notes:</h3>
   <div class="section">
-    <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+      <%= link_to edit_exercice_note_path(@note) do  %>
+        <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+      <% end %>
     <p class="gray_text mt-4"><%=@note.content%></p>
   </div>
 </div>

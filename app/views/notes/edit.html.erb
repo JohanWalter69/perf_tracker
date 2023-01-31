@@ -1,0 +1,6 @@
+<h1 class="title">Ecris-ici les conseils de ton coach pour ne pas oublier !</h1>
+
+<%= simple_form_for [@exercice, @note] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Update your bote" %>
+<% end %>

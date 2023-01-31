@@ -8,8 +8,8 @@ class ExercicesController < ApplicationController
   def show
     @loads = Load.all
     @notes = Note.all
-    @load = Load.find(params[:exercice_id])
-    @note = Note.find(params[:exercice_id])
+    @load = Load.find(params[:id])
+    @note = Note.find(params[:id])
   end
 
   private

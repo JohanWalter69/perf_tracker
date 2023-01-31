@@ -1,0 +1,6 @@
+<h1 class="title">Tu deviens un gros balaise alors change ta charge max !</h1>
+
+<%= simple_form_for [@exercice, @load] do |f| %>
+  <%= f.input :max_load %>
+  <%= f.submit "Update your load" %>
+<% end %>

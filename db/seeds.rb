@@ -31,7 +31,8 @@ john = User.create!(
   )
 
   pp_note = Note.create!(
-    content: 'suppppppppppppppppppppppppppppppppppppppp',
+    content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
+    un king de lhaléro',
     exercice: push_press,
   )
 
@@ -42,12 +43,13 @@ john = User.create!(
   )
 
   snatch_load = Load.create!(
-    max_load: 90,
+    max_load: 60,
     exercice: snatch,
   )
 
   snatch_note = Note.create!(
-    content: 'suppppppppppppppppppppppppppppppppppppppp',
+    content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
+    un king de lhaléro',
     exercice: snatch,
   )
 
@@ -58,12 +60,13 @@ john = User.create!(
   )
 
   deadlift_load = Load.create!(
-    max_load: 90,
+    max_load: 160,
     exercice: deadlift,
   )
 
   deadlift_note = Note.create!(
-    content: 'suppppppppppppppppppppppppppppppppppppppp',
+    content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
+    un king de lhaléro',
     exercice: deadlift,
   )
 end
