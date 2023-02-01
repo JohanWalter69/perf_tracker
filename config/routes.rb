@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'stimulus/dropdown_menu'
   get 'notes/edit'
   get 'notes/update'
   devise_for :users
