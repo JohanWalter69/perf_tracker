@@ -1,6 +1,12 @@
 <h1 class="title">Tu deviens un gros balaise alors change ta charge max !</h1>
 
-<%= simple_form_for [@exercice, @load] do |f| %>
-  <%= f.input :max_load %>
-  <%= f.submit "Update your load" %>
+<% frame_id = dom_id(@load, "name_turbo_frame") %>
+<%= turbo_frame_tag frame_id do %>
+  <%= simple_form_for [@exercice, @load] do |f| %>
+    <%= f.input :max_load %>
+    <div class="inputs-btn">
+      <%= f.submit "Update", class:"white-btn" %>
+  <% end %>
+      <%= link_to "Cancel", exercice_path(@exercice), class:"white-btn"  %>
+    </div>
 <% end %>

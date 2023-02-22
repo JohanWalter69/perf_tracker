@@ -11,10 +11,15 @@
   <div class="section">
     <div class="subsection">
       <h3 class="text-[#8A8A8A] mt-10">RM</h3>
-      <h2><%=@load.max_load%>kg</h2>
-      <%= link_to edit_exercice_load_path(@load) do  %>
-        <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+
+      <% frame_id = dom_id(@load, "name_turbo_frame") %>
+      <%= turbo_frame_tag frame_id do %>
+        <h2><%=@load.max_load%>kg</h2>
+        <%= link_to edit_exercice_load_path(@load) do  %>
+          <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+        <% end %>
       <% end %>
+
     </div>
     <div class="board">
       <div class="board_line">
@@ -53,9 +58,12 @@
   </div>
   <h3>Tes notes:</h3>
   <div class="section">
-      <%= link_to edit_exercice_note_path(@note) do  %>
-        <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
-      <% end %>
-    <p class="gray_text mt-4"><%=@note.content%></p>
+    <% frame_id = dom_id(@note, "name_turbo_frame") %>
+    <%= turbo_frame_tag frame_id do %>
+        <%= link_to edit_exercice_note_path(@note) do  %>
+          <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+        <% end %>
+      <p class="gray_text mt-4"><%=@note.content%></p>
+    <% end %>
   </div>
 </div>
