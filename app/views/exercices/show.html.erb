@@ -4,8 +4,13 @@
 </div>
 
 <div class="container">
-<div class="section">
-  <%= image_tag 'graph.jpg', class:"rounded-xl" %>
+<div class="section slider-section">
+  <div id="slider">
+  </div>
+  <div class="slider--footer">
+    <p>0%</p>
+    <p>100%</p>
+  </div>
 </div>
   <h3>Ton Tracking de charges:</h3>
   <div class="section">
@@ -14,14 +19,15 @@
 
       <% frame_id = dom_id(@load, "name_turbo_frame") %>
       <%= turbo_frame_tag frame_id do %>
-        <h2><%=@load.max_load%>kg</h2>
+        <h2 id="load" data-url="<%=@load.max_load%>"><%=@load.max_load%>kg</h2>
         <%= link_to edit_exercice_load_path(@load) do  %>
           <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
         <% end %>
       <% end %>
-
     </div>
-    <div class="board">
+
+    <%= turbo_stream_from "loads" %>
+    <div class="board" id="loads">
       <div class="board_line">
         <p class="green_text">110%</p>
         <p class="gray_text"><%=(@load.max_load*1.1).truncate(1)%>kg</p>
@@ -55,6 +61,7 @@
         <p class="gray_text"><%=(@load.max_load*0.5).truncate(1)%>kg</p>
       </div>
     </div>
+
   </div>
   <h3>Tes notes:</h3>
   <div class="section">

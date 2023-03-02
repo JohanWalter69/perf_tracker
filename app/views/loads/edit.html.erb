@@ -3,10 +3,10 @@
 <% frame_id = dom_id(@load, "name_turbo_frame") %>
 <%= turbo_frame_tag frame_id do %>
   <%= simple_form_for [@exercice, @load] do |f| %>
-    <%= f.input :max_load %>
+    <%= f.input :max_load, label: '.'%>
     <div class="inputs-btn">
-      <%= f.submit "Update", class:"white-btn" %>
+      <%= f.submit "Enregistrer", class:"white-btn" %>
   <% end %>
-      <%= link_to "Cancel", exercice_path(@exercice), class:"white-btn"  %>
+      <%= link_to "Annuler", exercice_path(@exercice), class:"white-btn"  %>
     </div>
 <% end %>

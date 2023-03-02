@@ -2,7 +2,27 @@ h3 {
   color: #8A8A8A;
   font-weight: 700
 }
+.subsection{
+  width: 50%;
+}
+.section.slider-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
 
+  // Trouver une autre solution non dépendente des margins = bricolage pour le moment
+  .slider--footer{
+    display: flex;
+    justify-content: space-between;
+    width: 91%;
+    margin-right: -36px;
+    margin-left: -20px;
+    margin-top: 8px;
+    color:#8A8A8A;
+    font-weight: 500;
+  }
+}
 .section {
   position: relative;
   display: flex;
@@ -41,6 +61,7 @@ h3 {
 .board {
   width: 30%;
   font-size: 12px;
+  margin: 8px;
 
   .board_line {
     display: flex;

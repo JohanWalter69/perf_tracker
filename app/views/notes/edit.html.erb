@@ -3,10 +3,10 @@
 <% frame_id = dom_id(@note, "name_turbo_frame") %>
 <%= turbo_frame_tag frame_id, class:"w-full" do %>
   <%= simple_form_for [@exercice, @note] do |f| %>
-    <%= f.input :content, class:"hidden" %>
+    <%= f.input :content, label: "Change ta note et valide", style:"text-grey" %>
     <div class="inputs-btn">
-      <%= f.submit "Update", class:"white-btn" %>
+      <%= f.submit "Enregistrer", class:"white-btn" %>
     <% end %>
-    <%= link_to "Cancel", exercice_path(@exercice), class:"white-btn"  %>
+    <%= link_to "Annuler", exercice_path(@exercice), class:"white-btn"  %>
     </div>
 <% end %>

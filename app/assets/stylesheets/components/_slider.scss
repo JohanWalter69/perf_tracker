@@ -1,0 +1,59 @@
+#slider {
+
+  .rs-range-color{
+  background-color: #FEA75D;
+  }
+
+  .rs-handle{
+    background-color: #FEA75D;
+  }
+
+  .rs-path-color{
+    background-color: #936134;
+  }
+
+  .rs-container{
+    height: 150px;
+    width: 300px;
+  }
+
+  .rs-bg-color{
+    background-color: #373535;
+  }
+
+  .rs-block{
+    position: relative;
+  }
+
+  .rs-tooltip-text{
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+
+    border-top: 2px dashed rgb(147, 254, 206);
+    border-left: 2px dashed rgb(147, 254, 206);
+    border-right: 2px dashed rgb(147, 254, 206);
+    border-radius: 200px 200px 0px 0px;
+    border-bottom: none;
+
+    position: absolute;
+    top: 10;
+    top: 40px;
+  }
+
+  // .rs-tooltip-text:after{
+  //   content: "%",
+  // }
+
+  .rs-tooltip div  {
+    text-align: center;
+    color: #8A8A8A;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: -10px;
+  }
+}
