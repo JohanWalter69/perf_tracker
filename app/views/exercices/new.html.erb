@@ -1,0 +1,7 @@
+<h1>Créer l'exercice de ton choix</h1>
+
+<%= simple_form_for @exercice do |f| %>
+  <%= f.input :name, placeholder: 'Entrer le nom' %>
+
+  <%= f.submit "Enregistrer", class:"white-btn" %>
+<% end %>

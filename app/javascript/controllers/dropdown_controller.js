@@ -18,8 +18,7 @@ export default class extends Controller {
 
     setTimeout(() => {
       if (!dropdown.classList.contains('hidden')){
-        console.log('caca');
-        overlay.addEventListener('click', event => {
+        overlay.addEventListener('turbo:load', 'click', event => {
         dropdown.classList.add('hidden');
         });
       };

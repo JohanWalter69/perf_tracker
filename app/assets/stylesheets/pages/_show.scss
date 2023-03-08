@@ -23,6 +23,33 @@ h3 {
     font-weight: 500;
   }
 }
+
+turbo-frame{
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row;
+  height: fit-content;
+  min-height: 220px;
+  width: 100%;
+  background-color: #373535;
+  border-radius: 8px;
+  margin-bottom: 0px;
+
+  h2 {
+    font-size: xx-large;
+    font-weight: 600;
+    color: white;
+  }
+
+  .fa-pen-to-square{
+    position: absolute;
+    top: -5px;
+    right: -6px;
+  }
+}
+
 .section {
   position: relative;
   display: flex;
@@ -44,8 +71,8 @@ h3 {
 
   .fa-pen-to-square{
     position: absolute;
-    top: 1px;
-    right: 1px;
+    top: -5px;
+    right: -6px;
   }
 
 }

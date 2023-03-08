@@ -13,56 +13,54 @@
   </div>
 </div>
   <h3>Ton Tracking de charges:</h3>
-  <div class="section">
-    <div class="subsection">
-      <h3 class="text-[#8A8A8A] mt-10">RM</h3>
 
-      <% frame_id = dom_id(@load, "name_turbo_frame") %>
+  <% frame_id = dom_id(@load, "name_turbo_frame") %>
+    <div class="section">
       <%= turbo_frame_tag frame_id do %>
-        <h2 id="load" data-url="<%=@load.max_load%>"><%=@load.max_load%>kg</h2>
-        <%= link_to edit_exercice_load_path(@load) do  %>
-          <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
-        <% end %>
+        <div class="subsection">
+          <h3 class="text-[#8A8A8A] mt-10">RM</h3>
+          <h2 id="load" data-url="<%=@load.max_load%>"><%=@load.max_load%>kg</h2>
+          <%= link_to edit_exercice_load_path(@load) do  %>
+            <i class="text-white m-2 fa-solid fa-pen-to-square"></i>
+          <% end %>
+        </div>
+
+        <div class="board" id="loads">
+          <div class="board_line">
+            <p class="green_text">110%</p>
+            <p class="gray_text"><%=(@load.max_load*1.1).truncate(1)%>kg</p>
+          </div>
+          <div class="board_line">
+            <p class="green_text">95%</p>
+            <p class="gray_text"><%=(@load.max_load*0.95).truncate(1)%>kg</p>
+          </div>
+          <div class="board_line">
+            <p class="green_text">90%</p>
+            <p class="gray_text"><%=(@load.max_load*0.9).truncate(1)%>kg</p>
+          </div>
+          <div class="board_line">
+            <p class="green_text">85%</p>
+            <p class="gray_text"><%=(@load.max_load*0.85).truncate(1)%>kg</p>
+          </div>
+          <div class="board_line">
+            <p class="green_text">80%</p>
+            <p class="gray_text"><%=(@load.max_load*0.8).truncate(1)%>kg</p>
+          </div>
+          <div class="board_line">
+            <p class="green_text">70%</p>
+            <p class="gray_text"><%=(@load.max_load*0.7).truncate(1)%>kg</p>
+          </div>
+          <div class="board_line">
+            <p class="green_text">60%</p>
+            <p class="gray_text"><%=(@load.max_load*0.6).truncate(1)%>kg</p>
+          </div>
+          <div class="board_line">
+            <p class="green_text">50%</p>
+            <p class="gray_text"><%=(@load.max_load*0.5).truncate(1)%>kg</p>
+          </div>
+        </div>
       <% end %>
     </div>
-
-    <%= turbo_stream_from "loads" %>
-    <div class="board" id="loads">
-      <div class="board_line">
-        <p class="green_text">110%</p>
-        <p class="gray_text"><%=(@load.max_load*1.1).truncate(1)%>kg</p>
-      </div>
-      <div class="board_line">
-        <p class="green_text">95%</p>
-        <p class="gray_text"><%=(@load.max_load*0.95).truncate(1)%>kg</p>
-      </div>
-      <div class="board_line">
-        <p class="green_text">90%</p>
-        <p class="gray_text"><%=(@load.max_load*0.9).truncate(1)%>kg</p>
-      </div>
-      <div class="board_line">
-        <p class="green_text">85%</p>
-        <p class="gray_text"><%=(@load.max_load*0.85).truncate(1)%>kg</p>
-      </div>
-      <div class="board_line">
-        <p class="green_text">80%</p>
-        <p class="gray_text"><%=(@load.max_load*0.8).truncate(1)%>kg</p>
-      </div>
-      <div class="board_line">
-        <p class="green_text">70%</p>
-        <p class="gray_text"><%=(@load.max_load*0.7).truncate(1)%>kg</p>
-      </div>
-      <div class="board_line">
-        <p class="green_text">60%</p>
-        <p class="gray_text"><%=(@load.max_load*0.6).truncate(1)%>kg</p>
-      </div>
-      <div class="board_line">
-        <p class="green_text">50%</p>
-        <p class="gray_text"><%=(@load.max_load*0.5).truncate(1)%>kg</p>
-      </div>
-    </div>
-
-  </div>
   <h3>Tes notes:</h3>
   <div class="section">
     <% frame_id = dom_id(@note, "name_turbo_frame") %>

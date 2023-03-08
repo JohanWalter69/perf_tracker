@@ -8,6 +8,7 @@ class LoadsController < ApplicationController
   def update
     @load = Load.find(params[:id])
     @load.update(load_params)
+
     redirect_to exercice_path(@load)
   end
 
@@ -16,4 +17,5 @@ class LoadsController < ApplicationController
   def load_params
     params.require(:load).permit(:max_load)
   end
+
 end

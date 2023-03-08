@@ -1,9 +1,5 @@
 <h1 class="title">Bienvenue sur PerfTracker, l'app des gros balaises !</h1>
 
-<%# <div class="exercice_card">
-  <iframe src="https://giphy.com/embed/jc1Fu8DXTV184" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-  <p><a href="https://giphy.com/gifs/guy-fieri-jc1Fu8DXTV184"></a></p>
-</div> %>
 <div class="container">
   <% @exercices.each do |exercice|%>
     <%= link_to exercice_path(exercice) do %>

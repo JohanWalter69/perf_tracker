@@ -18,55 +18,54 @@ john = User.create!(
 )
 
 
-10.times do
-  push_press = Exercice.create!(
-    name: 'Push Press',
-    image_url: '/assets/push_press.jpg',
-    user: john,
-  )
 
-  pp_load = Load.create!(
-    max_load: 90,
-    exercice: push_press,
-  )
+push_press = Exercice.create!(
+  name: 'Push Press',
+  image_url: '/assets/push_press.jpg',
+  user: john,
+)
 
-  pp_note = Note.create!(
-    content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
-    un king de lhaléro',
-    exercice: push_press,
-  )
+pp_load = Load.create!(
+  max_load: 90,
+  exercice: push_press,
+)
 
-  snatch = Exercice.create!(
-    name: 'Snatch',
-    image_url: '/assets/snatch.jpg',
-    user: john
-  )
+pp_note = Note.create!(
+  content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
+  un king de lhaléro',
+  exercice: push_press,
+)
 
-  snatch_load = Load.create!(
-    max_load: 60,
-    exercice: snatch,
-  )
+snatch = Exercice.create!(
+  name: 'Snatch',
+  image_url: '/assets/snatch.jpg',
+  user: john
+)
 
-  snatch_note = Note.create!(
-    content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
-    un king de lhaléro',
-    exercice: snatch,
-  )
+snatch_load = Load.create!(
+  max_load: 60,
+  exercice: snatch,
+)
 
-  deadlift = Exercice.create!(
-    name: 'Deadlift',
-    image_url: '/assets/deadlift.jpg',
-    user: john
-  )
+snatch_note = Note.create!(
+  content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
+  un king de lhaléro',
+  exercice: snatch,
+)
 
-  deadlift_load = Load.create!(
-    max_load: 160,
-    exercice: deadlift,
-  )
+deadlift = Exercice.create!(
+  name: 'Deadlift',
+  image_url: '/assets/deadlift.jpg',
+  user: john
+)
 
-  deadlift_note = Note.create!(
-    content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
-    un king de lhaléro',
-    exercice: deadlift,
-  )
-end
+deadlift_load = Load.create!(
+  max_load: 160,
+  exercice: deadlift,
+)
+
+deadlift_note = Note.create!(
+  content: 'Encore beaucoup de travail mais tu es sur la bonne voie pour devenir
+  un king de lhaléro',
+  exercice: deadlift,
+)

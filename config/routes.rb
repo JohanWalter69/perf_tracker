@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'exercices#home'
 
   # Defines the root path route ("/")
-  resources :exercices, only: %i[home show] do
+  resources :exercices, only: %i[home show new create] do
     resources :loads, only: %i[edit update]
     resources :notes, only: %i[edit update]
   end
