@@ -5,6 +5,10 @@
     <%= link_to exercice_path(exercice) do %>
     <div class="exercice_card">
       <img src="<%= exercice.image_url %>" alt="">
+      <%= link_to exercice_path(exercice), class: "delete-btn",
+                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-regular fa-trash-can"></i>
+      <% end %>
       <div class="exercice_main">
         <h2 class="exercice_title"><%= exercice.name %></h2>
       </div>

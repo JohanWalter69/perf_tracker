@@ -1,5 +1,5 @@
 class ExercicesController < ApplicationController
-  before_action :set_exercice, only: %i[show]
+  before_action :set_exercice, only: %i[show destroy]
 
   def home
     @exercices = Exercice.all
@@ -27,6 +27,15 @@ class ExercicesController < ApplicationController
     else
       flash[:alert] = 'Il y a une erreur, vérifie ton formulaire'
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    if @exercice.destroy
+      redirect_to root_path, status: :see_other
+    else
+      flash[:alert] = "An error occured"
+      render :home, status: :unauthorized
     end
   end
 

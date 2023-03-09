@@ -1,0 +1,23 @@
+.form--exercice{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+
+}
+#input{
+  width: 100%;
+  margin: 8px 0;
+}
+
+.select .required, .text .optional, .float .optional{
+  color: gray;
+  width: 100%;
+}
+
+.text .optional{
+  min-height: 30vh;
+
+}

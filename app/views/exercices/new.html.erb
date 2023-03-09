@@ -1,12 +1,13 @@
-<h1>Créer l'exercice de ton choix</h1>
-
-<%= simple_form_for @exercice do |f| %>
-  <%= f.input :name, collection: %w[Pull-Up Power-Clean Front-Squat Back-Squat Deadlift Push-Press] %>
-  <%= f.fields_for :note do |fa| %>
-    <%= fa.input :content, placeholder: 'note'  %>
+<div class="form--exercice">
+  <h1>Créer l'exercice de ton choix</h1>
+  <%= simple_form_for @exercice do |f| %>
+    <%= f.input :name, label: "Nom de l'exercice", collection: %w[Pull-Up Power-Clean Front-Squat Back-Squat Deadlift Push-Press], id:"input" %>
+    <%= f.fields_for :note do |fa| %>
+      <%= fa.input :content, label: "Tes notes", placeholder: 'Ecris tes notes de suivi', id:"input"  %>
+    <% end %>
+    <%= f.fields_for :load do |fb| %>
+      <%= fb.input :max_load, label: "Ton RM", placeholder: 'Ta charge maximale pour calculer les ratios', id:"input"  %>
+    <% end %>
+    <%= f.submit "Enregistrer", class:"white-btn" %>
   <% end %>
-  <%= f.fields_for :load do |fb| %>
-    <%= fb.input :max_load, placeholder: 'max_load'  %>
-  <% end %>
-  <%= f.submit "Enregistrer", class:"white-btn" %>
-<% end %>
+</div>
