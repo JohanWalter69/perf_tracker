@@ -1,7 +1,12 @@
 <h1>Créer l'exercice de ton choix</h1>
 
 <%= simple_form_for @exercice do |f| %>
-  <%= f.input :name, placeholder: 'Entrer le nom' %>
-
+  <%= f.input :name, collection: %w[Pull-Up Power-Clean Front-Squat Back-Squat Deadlift Push-Press] %>
+  <%= f.fields_for :note do |fa| %>
+    <%= fa.input :content, placeholder: 'note'  %>
+  <% end %>
+  <%= f.fields_for :load do |fb| %>
+    <%= fb.input :max_load, placeholder: 'max_load'  %>
+  <% end %>
   <%= f.submit "Enregistrer", class:"white-btn" %>
 <% end %>

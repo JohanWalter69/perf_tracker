@@ -1,6 +1,16 @@
-// Entry point for the build script in your package.json
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "./controllers"
+
+const importFlowbiteFunc = function(flowbitePathStr)
+{
+    const flowbiteScriptEl = document.createElement('script')
+    flowbiteScriptEl.setAttribute(
+        'src', flowbitePathStr
+    )
+    document.body.appendChild(flowbiteScriptEl)
+}
+importFlowbiteFunc('./node_modules/flowbite/dist/flowbite.js') // here goes your path to a local flowbite.js you want to import
 
 $("#slider").roundSlider({
   sliderType: "min-range",

@@ -4,4 +4,7 @@ class Exercice < ApplicationRecord
   has_one :note, dependent: :destroy
 
   validates :name, presence: true
+
+  accepts_nested_attributes_for :note
+  accepts_nested_attributes_for :load
 end

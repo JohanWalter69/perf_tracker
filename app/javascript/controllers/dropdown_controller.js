@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import "flowbite"
 
 // Connects to data-controller="dropdown"
 export default class extends Controller {

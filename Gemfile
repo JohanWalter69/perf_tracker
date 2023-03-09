@@ -80,3 +80,5 @@ gem "font-awesome-sass", "~> 6.1"
 
 # helper
 gem "simple_form", github: "heartcombo/simple_form"
+
+gem "importmap-rails", "~> 1.1"
