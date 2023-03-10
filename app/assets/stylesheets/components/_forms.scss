@@ -1,3 +1,4 @@
+/* New Exercice Form  */
 .form--exercice{
   width: 100%;
   display: flex;
@@ -12,7 +13,7 @@
   margin: 8px 0;
 }
 
-.select .required, .text .optional, .float .optional{
+.select .required, .text .optional, .integer .optional{
   color: gray;
   width: 100%;
 }
@@ -20,4 +21,36 @@
 .text .optional{
   min-height: 30vh;
 
+}
+
+/* Devise authentification form */
+.log-in-page{
+  color: white;
+  padding: 16px;
+}
+
+.simple_form.new_user{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  color: white;
+}
+
+.form-inputs{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.email.optional,.password.optional{
+  display: block;
+  color: white;
+  width: 100%;
+}
+
+#user_email,#user_password{
+  width: 100%;
+  color: black;
 }

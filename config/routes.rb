@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'stimulus/dropdown_menu'
-  get 'notes/edit'
-  get 'notes/update'
   devise_for :users
+  # get 'stimulus/dropdown_menu'
+  # get 'notes/edit'
+  # get 'notes/update'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'exercices#home'
 

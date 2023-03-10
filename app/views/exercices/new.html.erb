@@ -6,7 +6,7 @@
       <%= fa.input :content, label: "Tes notes", placeholder: 'Ecris tes notes de suivi', id:"input"  %>
     <% end %>
     <%= f.fields_for :load do |fb| %>
-      <%= fb.input :max_load, label: "Ton RM", placeholder: 'Ta charge maximale pour calculer les ratios', id:"input"  %>
+      <%= fb.input :max_load, as: :integer, label: "Ton RM", placeholder: 'Ta charge maximale pour calculer les ratios', id:"input" %>
     <% end %>
     <%= f.submit "Enregistrer", class:"white-btn" %>
   <% end %>

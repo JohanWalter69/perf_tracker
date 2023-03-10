@@ -6,23 +6,23 @@ export default class extends Controller {
   static targets = ['menu', 'overlay' ]
 
   toggle() {
-    console.log('coucou');
-    const overlay = document.querySelector('.overlay');
-    const dropdown = document.querySelector('#menu');
-
-    console.dir(overlay);
-    console.dir(dropdown);
+    // const overlay = document.querySelectorAll('.overlay');
+    // const dropdown = document.querySelector('#menu');
 
     this.menuTarget.classList.toggle('hidden');
 
-    console.log(dropdown.classList.contains('hidden'));
+    if (!this.menuTarget.classList.contains('hidden')){
+      window.addEventListener('turbo:load', 'click', event => {
+        this.menuTarget.classList.add('hidden');
+      });
+    };
 
-    setTimeout(() => {
-      if (!dropdown.classList.contains('hidden')){
-        overlay.addEventListener('turbo:load', 'click', event => {
-        dropdown.classList.add('hidden');
-        });
-      };
-    }, 3);
+    // setTimeout(() => {
+    //   if (!dropdown.classList.contains('hidden')){
+    //     overlay.addEventListener('turbo:load', 'click', event => {
+    //     dropdown.classList.add('hidden');
+    //     });
+    //   };
+    // }, 3);
   };
 }

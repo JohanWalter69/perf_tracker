@@ -19,8 +19,8 @@
 
   <body >
     <%= render "shared/navbar" %>
-    <% if notice %> <p class="alert alert-success"><%= notice %></p> <% end %>
-    <% if alert %> <p class="alert alert-danger"><%= alert %></p> <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>>
     <%= yield %>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
