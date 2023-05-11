@@ -11,11 +11,11 @@ export default class extends Controller {
 
     this.menuTarget.classList.toggle('hidden');
 
-    if (!this.menuTarget.classList.contains('hidden')){
-      window.addEventListener('turbo:load', 'click', event => {
-        this.menuTarget.classList.add('hidden');
-      });
-    };
+    // if (!this.menuTarget.classList.contains('hidden')){
+    //   window.addEventListener('turbo:load', 'click', event => {
+    //     this.menuTarget.classList.add('hidden');
+    //   });
+    // };
 
     // setTimeout(() => {
     //   if (!dropdown.classList.contains('hidden')){
@@ -25,4 +25,6 @@ export default class extends Controller {
     //   };
     // }, 3);
   };
+
+
 }

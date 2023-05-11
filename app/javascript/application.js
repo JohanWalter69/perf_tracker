@@ -1,6 +1,7 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "./controllers"
+import './vue_app'
 
 const importFlowbiteFunc = function(flowbitePathStr)
 {
@@ -27,6 +28,43 @@ $("#slider").roundSlider({
     var val = e.value
 
     return val + "%" + "<div>" + userLoad*val/100 + " kg" + "<div>";
+    // return val + "%" + "<div v-bind="load">" + {{username}}+ val/100 + " kg" + "<div>";
   },
 
 });
+
+// const dropdown = document.getElementById('menu');
+
+
+// document.addEventListener('click', event => {
+//   if (!dropdown.classList.contains('hidden')){
+//       console.log(!dropdown.classList.contains('hidden'));
+//       dropdown.classList.add('hidden')
+//     }
+//   });
+
+
+// //  if (!this.menuTarget.classList.contains('hidden')){
+// //     window.addEventListener('turbo:load', 'click', event => {
+// //       this.menuTarget.classList.add('hidden');
+// //     });
+// //   };
+const dropdown = document.querySelector('.dropdown');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+// Fonction pour ouvrir le menu dropdown
+function openDropdown() {
+  dropdownMenu.classList.add('show');
+  document.addEventListener('click', closeDropdown);
+}
+
+// Fonction pour fermer le menu dropdown
+function closeDropdown(event) {
+  if (!dropdown.contains(event.target)) {
+    dropdownMenu.classList.remove('show');
+    document.removeEventListener('click', closeDropdown);
+  }
+}
+
+// Ajouter un événement de clic sur le menu dropdown pour l'ouvrir
+dropdown.addEventListener('click', openDropdown);

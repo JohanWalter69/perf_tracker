@@ -16,5 +16,4 @@ class LoadsController < ApplicationController
   def load_params
     params.require(:load).permit(:max_load)
   end
-
 end
